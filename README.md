@@ -5,6 +5,8 @@ Localizes CSS based on a virtual DOM tree.
 [![NPM version](https://badge.fury.io/js/attach-css.svg)](https://badge.fury.io/js/attach-css)
 [![experimental](http://hughsk.github.io/stability-badges/dist/experimental.svg)](http://github.com/hughsk/stability-badges)
 
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/shama.svg)](https://saucelabs.com/u/shama)
+
 ## example
 
 ```js
