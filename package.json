@@ -1,0 +1,39 @@
+{
+  "name": "attach-css",
+  "version": "1.0.0",
+  "description": "Localizes CSS based on a virtual DOM tree.",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard --format && zuul --local 9966 -- test/index.js",
+    "ci": "standard && zuul -- test/index.js"
+  },
+  "author": "Kyle Robinson Young <kyle@dontkry.com> (http://dontkry.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shama/attach-css.git"
+  },
+  "files": [
+    "index.js",
+    "dist/"
+  ],
+  "keywords": [
+    "attach",
+    "css",
+    "element",
+    "virtual",
+    "dom",
+    "browser"
+  ],
+  "devDependencies": {
+    "base-element": "^2.1.1",
+    "global": "^4.3.0",
+    "standard": "^3.7.2",
+    "tap-spec": "^3.0.0",
+    "tape": "^4.0.0",
+    "zuul": "^3.0.0"
+  },
+  "dependencies": {
+    "css": "^2.2.0"
+  }
+}
