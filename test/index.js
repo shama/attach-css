@@ -66,6 +66,20 @@ test('* -> .my-button *', function (t) {
   })
 })
 
+test('.my-button.second -> .my-button.second', function (t) {
+  t.plan(1)
+  var result
+
+  setUp(function (fixture) {
+    var button = createButton(fixture)
+
+    result = attachCSS('.my-button.second { color: red; }', button.vtree, { compress: true })
+    t.equal(result, '.my-button.second{color:red;}')
+
+    tearDown(t.end)
+  })
+})
+
 function createButton (fixture, params) {
   params = params || { className: 'my-button' }
   var button = createElement(fixture)

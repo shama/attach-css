@@ -23,7 +23,11 @@ function prefixSelector (rules, vtree) {
         selector = parts[0] + '.' + rootClass
         if (parts.length > 1) selector += ' ' + parts.slice(1).join(' ')
         return selector
-      } else if (parts[0] === '#' + rootId || parts[0] === '.' + rootClass) {
+      } else if (
+        (parts[0] === '#' + rootId || parts[0] === '.' + rootClass) ||
+        (rootClass && parts[0].slice(1, rootClass.length + 1) === rootClass) ||
+        (rootId && parts[0].slice(1, rootId.length + 1) === rootId)
+      ) {
         return selector
       }
       return '.' + rootClass + ' ' + selector
