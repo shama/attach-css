@@ -67,7 +67,7 @@ test('* -> .my-button *', function (t) {
 })
 
 test('.my-button.second -> .my-button.second', function (t) {
-  t.plan(1)
+  t.plan(2)
   var result
 
   setUp(function (fixture) {
@@ -75,6 +75,9 @@ test('.my-button.second -> .my-button.second', function (t) {
 
     result = attachCSS('.my-button.second { color: red; }', button.vtree, { compress: true })
     t.equal(result, '.my-button.second{color:red;}')
+
+    result = attachCSS('.my-button.second button { color: red; }', button.vtree, { compress: true })
+    t.equal(result, '.my-button.second button{color:red;}')
 
     tearDown(t.end)
   })
